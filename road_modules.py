@@ -4,8 +4,6 @@ import statistics as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
 class Car:
 
     """
@@ -35,9 +33,6 @@ class Car:
     def __repr__(self):
         return self.__str__()
 
-
-
-
 class Road:
 
     """
@@ -59,8 +54,6 @@ class Road:
     def move(self, position):
         return Car(position, self.max_speed)
 
-
-
 class Simulation:
 
     """
@@ -77,15 +70,9 @@ class Simulation:
         self.positions = np.array([])
         self.speeds = np.array([])
 
-
-    
-
     def tick(self):
         for x in range(len(self.road.racecar) -1, -1, -1):
             self.road.racecar[x].go()
-
-
-
 
     def run(self):
         while self.ticks < self.total_ticks:
